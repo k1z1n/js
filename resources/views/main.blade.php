@@ -11,50 +11,50 @@
     <title>Главная</title>
 </head>
 <body class="bg-gray-100">
-<div class="container mx-auto mt-10">
+<div class="container mx-auto mt-10 flex justify-center">
 
     <!-- Кнопки для открытия модальных окон -->
     <div class="space-y-4">
         <button data-modal-target="dom-modal" data-modal-toggle="dom-modal"
-                class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                class="w-72 block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                 type="button">
             Преобразование типов данных
         </button>
 
         <button data-modal-target="else-if" data-modal-toggle="else-if"
-                class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                class="w-72 block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                 type="button">
             Условные операторы
         </button>
 
         <button data-modal-target="dom" data-modal-toggle="dom"
-                class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                class="w-72 block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                 type="button">
             Навигация по DOM
         </button>
 
-        <button data-modal-target="events-modal" data-modal-toggle="events-modal"
-                class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+        <button data-modal-target="class" data-modal-toggle="class"
+                class="w-72 block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                 type="button">
-            Основы событий, функции
+            Изменение стилей и клссов
+        </button>
+
+        <button data-modal-target="events-modal" data-modal-toggle="events-modal"
+                class="w-72 block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                type="button">
+            Функции
         </button>
 
         <button data-modal-target="mouse-events-modal" data-modal-toggle="mouse-events-modal"
-                class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                class="w-72 block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                 type="button">
             События мыши
         </button>
 
         <button data-modal-target="keyboard-events-modal" data-modal-toggle="keyboard-events-modal"
-                class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                class="w-72 block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                 type="button">
             События клавиатуры
-        </button>
-
-        <button data-modal-target="form-events-modal" data-modal-toggle="form-events-modal"
-                class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-                type="button">
-            Работа с формами
         </button>
     </div>
 
@@ -203,10 +203,12 @@ console.log(Number.isNaN(NaN));  // true
     </pre>
                     <p class="text-lg font-semibold text-gray-800">4. Часто используемые методы преобразования</p>
                     <p class="text-gray-700">
-                        Преобразование строки в число: parseInt() и parseFloat() Эти функции позволяют преобразовывать строки в числа, включая целые (parseInt()) и дробные (parseFloat()). <code>typeof</code> и некоторые методы и проверки.
+                        Преобразование строки в число: parseInt() и parseFloat() Эти функции позволяют преобразовывать
+                        строки в числа, включая целые (parseInt()) и дробные (parseFloat()). <code>typeof</code> и
+                        некоторые методы и проверки.
                     </p>
 
-{{--                    <p class="font-semibold text-gray-800">Оператор <code>typeof</code></p>--}}
+                    {{--                    <p class="font-semibold text-gray-800">Оператор <code>typeof</code></p>--}}
                     <pre class="code">
 let str = '100px';
 let num = parseInt(str);  // 100
@@ -216,7 +218,8 @@ let floatNum = parseFloat(floatStr);  // 3.14
 
     </pre>
                     <p class="text-gray-700">
-                        toString() для преобразования в строку Для преобразования числа или другого объекта в строку используется метод toString().
+                        toString() для преобразования в строку Для преобразования числа или другого объекта в строку
+                        используется метод toString().
 
                     </p>
                     <pre class="code">
@@ -280,7 +283,8 @@ console.log(result);  // 20
                 <div
                     class="p-6 space-y-6 overflow-y-auto h-[700px] bg-gray-50 rounded-lg shadow-md border border-gray-200">
                     <p class="h2">1. Оператор if...else</p>
-                    <p class="p">Оператор if...else выполняет один блок кода, если условие истинно (true), и другой блок кода, если условие ложно (false).</p>
+                    <p class="p">Оператор if...else выполняет один блок кода, если условие истинно (true), и другой блок
+                        кода, если условие ложно (false).</p>
                     <p class="p">Синтаксис:</p>
                     <pre class="code">
 if (условие) {
@@ -300,7 +304,8 @@ if (age >= 18) {
 }
                     </pre>
                     <p class="h2">2. Оператор else if</p>
-                    <p class="p">Оператор else if используется для проверки нескольких условий. Если одно из условий истинно, соответствующий блок кода будет выполнен.</p>
+                    <p class="p">Оператор else if используется для проверки нескольких условий. Если одно из условий
+                        истинно, соответствующий блок кода будет выполнен.</p>
                     <p class="p">Синтаксис:</p>
                     <pre class="code">
 if (условие1) {
@@ -324,7 +329,8 @@ if (score >= 90) {
 }
                     </pre>
                     <p class="h2">3. Тернарный оператор ?</p>
-                    <p class="p">Тернарный оператор ? является сокращённой формой записи оператора if...else. Он возвращает одно из двух значений в зависимости от условия.</p>
+                    <p class="p">Тернарный оператор ? является сокращённой формой записи оператора if...else. Он
+                        возвращает одно из двух значений в зависимости от условия.</p>
                     <p class="p">Синтаксис:</p>
                     <pre class="code">
 условие ? значение1 : значение2;
@@ -341,7 +347,8 @@ let message = isLoggedIn ? 'Добро пожаловать!' : 'Пожалуй�
 console.log(message);  // 'Добро пожаловать!'
                     </pre>
                     <div class="h2">4. Оператор switch</div>
-                    <p class="p">Оператор switch проверяет значение переменной и выполняет соответствующий блок кода, если есть совпадение.</p>
+                    <p class="p">Оператор switch проверяет значение переменной и выполняет соответствующий блок кода,
+                        если есть совпадение.</p>
                     <p class="p">Синтаксис:</p>
                     <pre class="code">
 switch (выражение) {
@@ -414,7 +421,7 @@ switch (weather) {
             <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
                 <div class="flex items-center justify-between p-4 border-b rounded-t dark:border-gray-600">
                     <h3 class="header-text">
-                        Преобразование типов данных
+                        Навигация по DOM
                     </h3>
                     <button type="button"
                             class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
@@ -426,7 +433,8 @@ switch (weather) {
                         </svg>
                     </button>
                 </div>
-                <div class="p-6 space-y-6 overflow-y-auto h-[700px] bg-gray-50 rounded-lg shadow-md border border-gray-200">
+                <div
+                    class="p-6 space-y-6 overflow-y-auto h-[700px] bg-gray-50 rounded-lg shadow-md border border-gray-200">
                     <div class="h2">2. Выбор элементов</div>
                     <p class="p">JavaScript предоставляет несколько методов для поиска и работы с элементами DOM.</p>
                     <p class="h3">2.1 getElementById()</p>
@@ -473,7 +481,8 @@ let elements = document.querySelectorAll('.container .item');
 console.log(elements);  // Вернёт NodeList всех элементов с классом "item"
                     </pre>
                     <div class="h2">3. Изменение элементов</div>
-                    <p class="p">После того, как элементы были выбраны, с ними можно взаимодействовать — изменять текст, стили или добавлять новые элементы.</p>
+                    <p class="p">После того, как элементы были выбраны, с ними можно взаимодействовать — изменять текст,
+                        стили или добавлять новые элементы.</p>
                     <div class="h3">3.1 Изменение текста</div>
                     <p class="p">Используйте свойство textContent для изменения текста внутри элемента.</p>
                     <pre class="code">
@@ -499,7 +508,8 @@ element.style.backgroundColor = 'blue';  // Изменит цвет фона н�
                         4.1 Создание элементов
                     </div>
                     <p class="p">
-                        Используйте метод createElement() для создания новых элементов и appendChild() для их добавления в DOM.
+                        Используйте метод createElement() для создания новых элементов и appendChild() для их добавления
+                        в DOM.
                     </p>
                     <pre class="code">
 let newElement = document.createElement('div');
@@ -523,139 +533,644 @@ element.remove();  // Удалит элемент с id "header"
 </div>
 
 
-
-
-
-
-
-
-
-
-
-    <!-- Modal Основы событий, функции -->
-    <div id="events-modal" tabindex="-1" aria-hidden="true"
-         class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full h-[calc(100%-1rem)] max-h-full">
-        <div class="relative p-4 w-full max-w-2xl max-h-full">
-            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                <div class="flex items-center justify-between p-4 border-b rounded-t dark:border-gray-600">
-                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                        Основы событий, функции
-                    </h3>
-                    <button type="button"
-                            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                            data-modal-hide="events-modal">
-                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                             viewBox="0 0 14 14">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-                        </svg>
-                    </button>
+<!-- Modal Основы событий, функции -->
+<div id="events-modal" tabindex="-1" aria-hidden="true"
+     class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full h-[calc(100%-1rem)] max-h-full">
+    <div class="relative p-4 w-full max-w-2xl max-h-full">
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <div class="flex items-center justify-between p-4 border-b rounded-t dark:border-gray-600">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                    Функции
+                </h3>
+                <button type="button"
+                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                        data-modal-hide="events-modal">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                         viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="p-4 space-y-4">
+                <div class="h2">1. Обычные функции
                 </div>
-                <div class="p-4 space-y-4">
-                    <p>События позволяют взаимодействовать с пользователем. Пример события — это нажатие на кнопку.
-                        Функции — это блоки кода, которые выполняют действия при вызове.</p>
-                    <ul class="list-disc pl-5">
-                        <li><strong>addEventListener</strong>: Добавление обработчика события.</li>
-                        <li><strong>removeEventListener</strong>: Удаление обработчика.</li>
-                    </ul>
+                <p class="p">Пример:</p>
+                <pre class="code">
+function greet(name) {
+    return `Hello, ${name}!`;
+}
+console.log(greet("Alice")); // Hello, Alice!
+                    </pre>
+                <div class="h2">
+                    2. Функциональные выражения
                 </div>
+                <p>Пример:</p>
+                <pre class="code">
+const greet = function(name) {
+    return `Hello, ${name}!`;
+};
+console.log(greet("Bob")); // Hello, Bob!
+                    </pre>
+                <div class="h2">3. Cтрелочные функции</div>
+                <p class="p">Пример:</p>
+                <pre class="code">
+const greet = (name) => {
+    return `Hello, ${name}!`;
+};
+console.log(greet("Charlie")); // Hello, Charlie!
+                    </pre>
             </div>
         </div>
     </div>
-
-    <!-- Modal События мыши -->
-    <div id="mouse-events-modal" tabindex="-1" aria-hidden="true"
-         class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full h-[calc(100%-1rem)] max-h-full">
-        <div class="relative p-4 w-full max-w-2xl max-h-full">
-            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                <div class="flex items-center justify-between p-4 border-b rounded-t dark:border-gray-600">
-                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                        События мыши
-                    </h3>
-                    <button type="button"
-                            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                            data-modal-hide="mouse-events-modal">
-                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                             viewBox="0 0 14 14">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="p-4 space-y-4">
-                    <p>События мыши включают взаимодействие с элементами на странице с помощью мыши.</p>
-                    <ul class="list-disc pl-5">
-                        <li><strong>click</strong>: Нажатие на элемент.</li>
-                        <li><strong>dblclick</strong>: Двойной клик.</li>
-                        <li><strong>mouseenter</strong>: Наведение курсора.</li>
-                        <li><strong>mouseleave</strong>: Уход курсора с элемента.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal События клавиатуры -->
-    <div id="keyboard-events-modal" tabindex="-1" aria-hidden="true"
-         class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full h-[calc(100%-1rem)] max-h-full">
-        <div class="relative p-4 w-full max-w-2xl max-h-full">
-            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                <div class="flex items-center justify-between p-4 border-b rounded-t dark:border-gray-600">
-                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                        События клавиатуры
-                    </h3>
-                    <button type="button"
-                            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                            data-modal-hide="keyboard-events-modal">
-                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                             viewBox="0 0 14 14">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="p-4 space-y-4">
-                    <p>События клавиатуры включают взаимодействие с элементами через нажатие клавиш.</p>
-                    <ul class="list-disc pl-5">
-                        <li><strong>keydown</strong>: Нажатие клавиши.</li>
-                        <li><strong>keyup</strong>: Отпускание клавиши.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal Работа с формами -->
-    <div id="form-events-modal" tabindex="-1" aria-hidden="true"
-         class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full h-[calc(100%-1rem)] max-h-full">
-        <div class="relative p-4 w-full max-w-2xl max-h-full">
-            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                <div class="flex items-center justify-between p-4 border-b rounded-t dark:border-gray-600">
-                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                        Работа с формами
-                    </h3>
-                    <button type="button"
-                            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                            data-modal-hide="form-events-modal">
-                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                             viewBox="0 0 14 14">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="p-4 space-y-4">
-                    <p>Работа с формами — важная часть взаимодействия с пользователем. Основные события:</p>
-                    <ul class="list-disc pl-5">
-                        <li><strong>submit</strong>: Отправка формы.</li>
-                        <li><strong>change</strong>: Изменение значения в поле формы.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
 </div>
 
+<div id="class" tabindex="-1" aria-hidden="true"
+     class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full h-[calc(100%-1rem)] max-h-full">
+    <div class="relative p-4 w-full max-w-4xl max-h-full">
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <div class="flex items-center justify-between p-4 border-b rounded-t dark:border-gray-600">
+                <h3 class="header-text">
+                    Преобразование типов данных
+                </h3>
+                <button type="button"
+                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                        data-modal-hide="dom-modal">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                         viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="p-6 space-y-6 overflow-y-auto h-[700px] bg-gray-50 rounded-lg shadow-md border border-gray-200">
+                <div class="h2">
+                    1. Свойство style
+                </div>
+                <p class="p">
+                    Свойство <code>style</code> используется для прямого изменения стилей HTML-элемента в JavaScript. Оно позволяет изменить отдельные CSS-свойства для элемента.
+                </p>
+                <div class="h3">
+                    Пример:
+                </div>
+                <pre class="code">
+&lt;div id="box" style="width: 100px; height: 100px; background-color: lightblue;"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+    let box = document.getElementById('box');
+    box.style.backgroundColor = 'red'; // Изменение цвета фона
+    box.style.width = '150px';         // Изменение ширины элемента
+&lt;/script&gt;
+</pre>
+
+                <div class="h2">
+                    2. Свойство classList
+                </div>
+                <p class="p">
+                    Свойство <code>classList</code> позволяет управлять классами элемента. С помощью этого свойства можно добавлять, удалять и проверять наличие классов у элемента.
+                </p>
+                <div class="h3">
+                    Методы:
+                </div>
+                <ul class="list">
+                    <li><code>add(className)</code> — добавляет указанный класс к элементу.</li>
+                    <li><code>remove(className)</code> — удаляет указанный класс из элемента.</li>
+                    <li><code>toggle(className)</code> — добавляет класс, если его нет, или удаляет, если он уже есть.</li>
+                    <li><code>contains(className)</code> — проверяет, содержит ли элемент указанный класс.</li>
+                </ul>
+                <div class="h3">
+                    Пример:
+                </div>
+                <pre class="code">
+&lt;div id="box" class="box"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+    let box = document.getElementById('box');
+    box.classList.add('active');     // Добавление класса 'active'
+    box.classList.remove('box');     // Удаление класса 'box'
+    box.classList.toggle('highlight'); // Добавление или удаление класса 'highlight'
+    let hasActive = box.classList.contains('active'); // Проверка наличия класса 'active'
+&lt;/script&gt;
+</pre>
+
+                <div class="h2">
+                    3. Метод getComputedStyle
+                </div>
+                <p class="p">
+                    Метод <code>getComputedStyle</code> позволяет получить все стили, примененные к элементу, включая те, которые могут быть унаследованы от CSS-файлов. Этот метод возвращает объект, который содержит значения всех CSS-свойств элемента.
+                </p>
+                <div class="h3">
+                    Пример:
+                </div>
+                <pre class="code">
+&lt;div id="box" style="color: red; font-size: 20px;"&gt;Hello&lt;/div&gt;
+
+&lt;script&gt;
+    let box = document.getElementById('box');
+    let styles = getComputedStyle(box);
+    console.log(styles.color); // Выводит цвет текста
+    console.log(styles.fontSize); // Выводит размер шрифта
+&lt;/script&gt;
+</pre>
+
+                <div class="h2">
+                    4. Метод setAttribute
+                </div>
+                <p class="p">
+                    Метод <code>setAttribute</code> используется для установки значения атрибута элемента. Он принимает два аргумента: имя атрибута и его значение.
+                </p>
+                <div class="h3">
+                    Пример:
+                </div>
+                <pre class="code">
+&lt;div id="box"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+    let box = document.getElementById('box');
+    box.setAttribute('data-id', '123'); // Установка атрибута 'data-id' со значением '123'
+&lt;/script&gt;
+</pre>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal События мыши -->
+<div id="mouse-events-modal" tabindex="-1" aria-hidden="true"
+     class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full h-[calc(100%-1rem)] max-h-full">
+    <div class="relative p-4 w-full max-w-4xl max-h-full">
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <div class="flex items-center justify-between p-4 border-b rounded-t dark:border-gray-600">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                    События мыши
+                </h3>
+                <button type="button"
+                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                        data-modal-hide="mouse-events-modal">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                         fill="none"
+                         viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                              stroke-width="2"
+                              d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="p-6 space-y-6 overflow-y-auto h-[700px] bg-gray-50 rounded-lg shadow-md border border-gray-200 w-full">
+                <div class="h2">
+                    1. Событие click
+                </div>
+                <p class="p">
+                    Событие <code>click</code> возникает, когда пользователь нажимает и отпускает кнопку мыши над элементом. Это событие часто используется для выполнения действия при клике на кнопки или другие интерактивные элементы.
+                </p>
+                <div class="h3">
+                    Пример:
+                </div>
+                <pre class="code">
+&lt;button id="myButton"&gt;Нажми на меня&lt;/button&gt;
+
+&lt;script&gt;
+    document.getElementById('myButton').addEventListener('click', function() {
+        alert('Кнопка нажата!');
+    });
+&lt;/script&gt;
+</pre>
+
+                <div class="h2">
+                    2. Событие mouseenter
+                </div>
+                <p class="p">
+                    Событие <code>mouseenter</code> возникает, когда указатель мыши входит в область элемента. Это событие срабатывает только один раз при входе указателя в элемент.
+                </p>
+                <div class="h3">
+                    Пример:
+                </div>
+                <pre class="code">
+&lt;div id="box" style="width: 100px; height: 100px; background-color: lightblue;"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+    let box = document.getElementById('box');
+    box.addEventListener('mouseenter', function() {
+        box.style.backgroundColor = 'red'; // Изменение цвета фона при наведении
+    });
+&lt;/script&gt;
+</pre>
+
+                <div class="h2">
+                    3. Событие mouseleave
+                </div>
+                <p class="p">
+                    Событие <code>mouseleave</code> возникает, когда указатель мыши уходит из области элемента. Это событие срабатывает только один раз при уходе указателя из элемента.
+                </p>
+                <div class="h3">
+                    Пример:
+                </div>
+                <pre class="code">
+&lt;div id="box" style="width: 100px; height: 100px; background-color: lightblue;"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+    let box = document.getElementById('box');
+    box.addEventListener('mouseleave', function() {
+        box.style.backgroundColor = 'lightblue';
+        // Возвращение исходного цвета при уходе указателя
+    });
+&lt;/script&gt;
+</pre>
+
+                <div class="h2">
+                    4. Событие dblclick
+                </div>
+                <p class="p">
+                    Событие <code>dblclick</code> возникает, когда пользователь дважды быстро нажимает на элемент. Это событие часто используется для действий, которые требуют двойного клика, например, для открытия файла.
+                </p>
+                <div class="h3">
+                    Пример:
+                </div>
+                <pre class="code">
+&lt;button id="myButton"&gt;Дважды кликните&lt;/button&gt;
+
+&lt;script&gt;
+    document.getElementById('myButton').addEventListener('dblclick', function() {
+        alert('Кнопка дважды нажата!');
+    });
+&lt;/script&gt;
+</pre>
+
+                <div class="h2">
+                    5. Событие mousemove
+                </div>
+                <p class="p">
+                    Событие <code>mousemove</code> возникает, когда указатель мыши перемещается по элементу. Оно часто используется для создания интерактивных эффектов, таких как отображение координат указателя.
+                </p>
+                <div class="h3">
+                    Пример:
+                </div>
+                <pre class="code">
+&lt;div id="box" style="width: 100px; height: 100px; background-color: lightblue;"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+    let box = document.getElementById('box');
+    box.addEventListener('mousemove', function(event) {
+        console.log('Координаты: ' + event.clientX + ', ' + event.clientY);
+    });
+&lt;/script&gt;
+</pre>
+
+                <div class="h2">
+                    6. Событие mousedown
+                </div>
+                <p class="p">
+                    Событие <code>mousedown</code> возникает, когда пользователь нажимает кнопку мыши над элементом. Это событие регистрируется до того, как кнопка мыши будет отпущена.
+                </p>
+                <div class="h3">
+                    Пример:
+                </div>
+                <pre class="code">
+&lt;div id="box" style="width: 100px; height: 100px; background-color: lightblue;"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+    let box = document.getElementById('box');
+    box.addEventListener('mousedown', function() {
+        box.style.backgroundColor = 'green'; // Изменение цвета фона при нажатии кнопки мыши
+    });
+&lt;/script&gt;
+</pre>
+
+                <div class="h2">
+                    7. Событие mouseup
+                </div>
+                <p class="p">
+                    Событие <code>mouseup</code> возникает, когда пользователь отпускает кнопку мыши над элементом. Это событие срабатывает после того, как кнопка мыши была отпущена.
+                </p>
+                <div class="h3">
+                    Пример:
+                </div>
+                <pre class="code">
+&lt;div id="box" style="width: 100px; height: 100px; background-color: lightblue;"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+    let box = document.getElementById('box');
+    box.addEventListener('mouseup', function() {
+        box.style.backgroundColor = 'yellow';
+        // Изменение цвета фона при отпускании кнопки мыши
+    });
+&lt;/script&gt;
+</pre>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal События клавиатуры -->
+<div id="keyboard-events-modal" tabindex="-1" aria-hidden="true"
+     class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full h-[calc(100%-1rem)] max-h-full">
+    <div class="relative p-4 w-full max-w-4xl max-h-full">
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <div class="flex items-center justify-between p-4 border-b rounded-t dark:border-gray-600">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                    События клавиатуры
+                </h3>
+                <button type="button"
+                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                        data-modal-hide="keyboard-events-modal">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                         fill="none"
+                         viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                              stroke-width="2"
+                              d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="p-6 space-y-6 overflow-y-auto h-[700px] bg-gray-50 rounded-lg shadow-md border border-gray-200">
+                <div class="h2">
+                    1. Событие keydown
+                </div>
+                <p class="p">
+                    Событие <code>keydown</code> возникает, когда клавиша на клавиатуре нажата. Это событие срабатывает в момент нажатия на клавишу и может использоваться для отслеживания, когда пользователь начинает взаимодействовать с клавиатурой.
+                </p>
+                <div class="h3">
+                    Пример:
+                </div>
+                <pre class="code">
+&lt;input id="inputField" type="text" placeholder="Нажмите клавишу"&gt;
+
+&lt;script&gt;
+    document.addEventListener('keydown', function(event) {
+        console.log('Клавиша нажата: ' + event.key);
+    });
+&lt;/script&gt;
+</pre>
+
+                <div class="h2">
+                    2. Событие keyup
+                </div>
+                <p class="p">
+                    Событие <code>keyup</code> возникает, когда клавиша отпущена. Оно срабатывает после того, как клавиша была нажата и затем отпущена, что может быть полезно для выполнения действия после завершения ввода.
+                </p>
+                <div class="h3">
+                    Пример:
+                </div>
+                <pre class="code">
+&lt;input id="inputField" type="text" placeholder="Отпустите клавишу"&gt;
+
+&lt;script&gt;
+    document.addEventListener('keyup', function(event) {
+        console.log('Клавиша отпущена: ' + event.key);
+    });
+&lt;/script&gt;
+</pre>
+
+                <div class="h2">
+                    3. Отслеживание нажатия нескольких клавиш (hotkeys)
+                </div>
+                <p class="p">
+                    Можно использовать комбинацию клавиш для выполнения определенных действий. Например, комбинации "Ctrl + S" или "Shift + A" могут быть полезны для создания горячих клавиш в вашем приложении.
+                </p>
+                <div class="h3">
+                    Пример:
+                </div>
+                <pre class="code">
+&lt;script&gt;
+    document.addEventListener('keydown', function(event) {
+        if (event.ctrlKey && event.key === 's') {
+            event.preventDefault(); // Останавливаем стандартное поведение
+            alert('Сохранение!');
+        }
+    });
+&lt;/script&gt;
+</pre>
+
+                <div class="h2">
+                    4. Ввод текста через событие input
+                </div>
+                <p class="p">
+                    Событие <code>input</code> используется для отслеживания ввода текста в текстовых полях. Оно срабатывает каждый раз, когда пользователь изменяет содержимое поля ввода.
+                </p>
+                <div class="h3">
+                    Пример:
+                </div>
+                <pre class="code">
+&lt;input id="inputField" type="text" placeholder="Введите текст"&gt;
+
+&lt;script&gt;
+    let inputField = document.getElementById('inputField');
+    inputField.addEventListener('input', function(event) {
+        console.log('Введено: ' + event.target.value);
+    });
+&lt;/script&gt;
+</pre>
+
+                <div class="h2">
+                    5. Использование клавиш для управления элементами на странице
+                </div>
+                <p class="p">
+                    Можно использовать клавиши для управления элементами на странице, например, перемещать объект по экрану с помощью клавиш-стрелок или клавиш "W", "A", "S", "D".
+                </p>
+                <div class="h3">
+                    Пример:
+                </div>
+                <pre class="code">
+&lt;div id="box" style="width: 50px; height: 50px; background-color: lightblue;
+position: relative;"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+    let box = document.getElementById('box');
+    let step = 10;
+
+    document.addEventListener('keydown', function(event) {
+        let position = box.getBoundingClientRect();
+
+        switch (event.code) {
+        case 'ArrowUp':
+            box.style.top = (position.top - step) + 'px';
+            break;
+        case 'ArrowDown':
+            box.style.top = (position.top + step) + 'pxx';
+            break;
+        case 'ArrowLeft':
+            box.style.left = (position.left - step) + 'px';
+            break;
+        case 'ArrowRight':
+            box.style.left = (position.left + step) + 'px';
+            break;
+    }
+    });
+&lt;/script&gt;
+</pre>
+                <div class="h2">
+                    1. Подробнее об объекте event
+                </div>
+                <p class="p">
+                    Когда срабатывает событие, браузер создает объект события, содержащий всю информацию о произошедшем событии. Этот объект передается в обработчик событий автоматически. Объект <code>event</code> содержит свойства и методы, которые позволяют получить доступ к различным данным о событии, таким как клавиша, которая была нажата, координаты мыши, элемент, на котором произошло событие, и многое другое.
+                </p>
+                <div class="h3">
+                    Пример:
+                </div>
+                <pre class="code">
+&lt;input type="text" id="inputField" placeholder="Введите текст"&gt;
+
+&lt;script&gt;
+    document.addEventListener('keydown', function(event) {
+        console.log('Клавиша нажата: ' + event.key); // Получаем нажатую клавишу
+        console.log('Код клавиши: ' + event.code);   // Получаем код клавиши
+        console.log('Alt нажат: ' + event.altKey);   // Проверяем, нажата ли клавиша Alt
+    });
+&lt;/script&gt;
+</pre>
+
+                <div class="h2">
+                    2. Свойства объекта event
+                </div>
+                <p class="p">
+                    Объект <code>event</code> содержит множество полезных свойств. Вот несколько основных:
+                </p>
+                <ul class="p">
+                    <li><code>event.key</code> — возвращает символ клавиши, которую нажал пользователь.</li>
+                    <li><code>event.code</code> — возвращает код клавиши (например, <code>'KeyA'</code> для клавиши "A").</li>
+                    <li><code>event.altKey</code>, <code>event.ctrlKey</code>, <code>event.shiftKey</code> — булевы значения, показывающие, были ли нажаты соответствующие модификаторные клавиши.</li>
+                    <li><code>event.target</code> — элемент, на котором произошло событие.</li>
+                    <li><code>event.type</code> — тип события (например, <code>'keydown'</code>, <code>'click'</code>).</li>
+                    <li><code>event.preventDefault()</code> — метод, который останавливает стандартное поведение элемента (например, предотвращает отправку формы).</li>
+                </ul>
+
+                <div class="h3">
+                    Пример использования event.preventDefault():
+                </div>
+                <pre class="code">
+&lt;form id="myForm"&gt;
+    &lt;input type="submit" value="Отправить"&gt;
+&lt;/form&gt;
+
+&lt;script&gt;
+    let form = document.getElementById('myForm');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Предотвращает отправку формы
+        alert('Форма не отправлена');
+    });
+&lt;/script&gt;
+</pre>
+
+                <div class="h2">
+                    3. Получение данных о клавише и модификаторах
+                </div>
+                <p class="p">
+                    При работе с событиями клавиатуры часто важно знать, была ли нажата определенная клавиша или модификаторы вроде Alt, Ctrl, Shift. Это можно легко сделать с помощью объекта <code>event</code>.
+                </p>
+                <div class="h3">
+                    Пример:
+                </div>
+                <pre class="code">
+&lt;script&gt;
+    document.addEventListener('keydown', function(event) {
+        if (event.altKey && event.key === 'S') {
+            console.log('Нажата комбинация Alt+S');
+        }
+    });
+&lt;/script&gt;
+</pre>
+
+                <div class="h2">
+                    4. Примеры использования разных свойств объекта event
+                </div>
+                <div class="h3">
+                    Пример отслеживания нажатий клавиш с использованием event.key и event.code:
+                </div>
+                <pre class="code">
+&lt;script&gt;
+    document.addEventListener('keydown', function(event) {
+        console.log('Вы нажали клавишу: ' + event.key); // Получаем символ нажатой клавиши
+        console.log('Код клавиши: ' + event.code);      // Получаем код клавиши
+    });
+&lt;/script&gt;
+</pre>
+
+                <div class="h3">
+                    Пример использования event.target для получения элемента, на котором произошло событие:
+                </div>
+                <pre class="code">
+&lt;div id="div1"&gt;Нажми сюда&lt;/div&gt;
+&lt;div id="div2"&gt;Или сюда&lt;/div&gt;
+
+&lt;script&gt;
+    document.addEventListener('click', function(event) {
+        console.log('Вы нажали на элемент с id: ' + event.target.id);
+    });
+&lt;/script&gt;
+</pre>
+
+                <div class="h3">
+                    Пример: изменение поведения браузера с помощью event.preventDefault():
+                </div>
+                <pre class="code">
+&lt;a href="https://example.com" id="link"&gt;Перейти на сайт&lt;/a&gt;
+
+&lt;script&gt;
+    let link = document.getElementById('link');
+    link.addEventListener('click', function(event) {
+        event.preventDefault(); // Предотвращаем переход по ссылке
+        alert('Переход отменен!');
+    });
+&lt;/script&gt;
+</pre>
+
+                <div class="h2">
+                    5. Событие input: работа с полями формы
+                </div>
+                <p class="p">
+                    Событие <code>input</code> позволяет отслеживать изменения в текстовых полях формы. Это удобно, когда нужно реагировать на изменения в реальном времени.
+                </p>
+                <div class="h3">
+                    Пример:
+                </div>
+                <pre class="code">
+&lt;input type="text" id="textInput" placeholder="Введите текст"&gt;
+
+&lt;script&gt;
+    let inputField = document.getElementById('textInput');
+    inputField.addEventListener('input', function(event) {
+        console.log('Вы ввели: ' + event.target.value); // Получаем текущее значение
+    });
+&lt;/script&gt;
+</pre>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Работа с формами -->
+<div id="form-events-modal" tabindex="-1" aria-hidden="true"
+     class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full h-[calc(100%-1rem)] max-h-full">
+    <div class="relative p-4 w-full max-w-2xl max-h-full">
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <div class="flex items-center justify-between p-4 border-b rounded-t dark:border-gray-600">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                    Работа с формами
+                </h3>
+                <button type="button"
+                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                        data-modal-hide="form-events-modal">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                         fill="none"
+                         viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                              stroke-width="2"
+                              d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="p-4 space-y-4">
+                <p>Работа с формами — важная часть взаимодействия с пользователем. Основные события:</p>
+                <ul class="list-disc pl-5">
+                    <li><strong>submit</strong>: Отправка формы.</li>
+                    <li><strong>change</strong>: Изменение значения в поле формы.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
